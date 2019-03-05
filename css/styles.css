@@ -1,0 +1,28 @@
+.rules{
+  display: none;
+}
+
+.dets{
+  display: none;
+}
+
+.wel{
+  display: none;
+}
+
+.play{
+  display: none;
+}
+
+.jumbotron{
+  color: black;
+}
+
+#start, #rule{
+  border-radius: 10px;
+}
+
+#next{
+  margin-top: 20px;
+  border-radius: 10px;
+}
