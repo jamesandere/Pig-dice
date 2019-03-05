@@ -25,7 +25,7 @@ I used CSS for styling
 
 I used Javascript for functionality
 ## Live Link
-url:
+url: https://jamesandere.github.io/Pig-dice/
 ## Support and contact details
 Contact me through email: jamesandere56@gmail.com
 ### License
