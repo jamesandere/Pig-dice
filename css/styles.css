@@ -1,5 +1,5 @@
 body{
-  background-image: url("https://steamuserimages-a.akamaihd.net/ugc/3298062395394990387/6FB01AA0A96A39A5394808EECB669D5F11AFFFF8/");
+  background-image:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("https://steamuserimages-a.akamaihd.net/ugc/3298062395394990387/6FB01AA0A96A39A5394808EECB669D5F11AFFFF8/");
   color: white;
   font-size: 20px;
 }
