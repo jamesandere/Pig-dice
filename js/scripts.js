@@ -17,7 +17,7 @@ function Roller() {
 Roller.prototype.roll = function(){
   if(this.diceRoll === 1){
     this.yourScoreInThisRound = 0;
-    alert("You rolled a 1");
+    alert("Oops! You rolled a 1. Allow the next player to roll.");
   }
   else{
     this.yourScoreInThisRound += this.diceRoll;
@@ -45,11 +45,20 @@ Roller.prototype.freshGame = function(){
  $(document).ready(function(){
  playerOne = new Roller();
  playerTwo = new Roller();
+
+
+
+
+
  $("#one").click(function(){
   playerOne.diceRoll = rollingDice();
   $("#game").text(playerOne.diceRoll);
   playerOne.roll();
   $("#round").text(playerOne.yourScoreInThisRound);
+  if(playerOne.diceRoll === 1){
+    $(".pl1").hide();
+    $(".pl2").show();
+  }
 })
 
 $("#two").click(function(){
@@ -57,6 +66,10 @@ $("#two").click(function(){
   $("#gam").text(playerTwo.diceRoll);
   playerTwo.roll();
   $("#round2").text(playerTwo.yourScoreInThisRound);
+  if(playerTwo.diceRoll === 1){
+    $(".pl1").show();
+    $(".pl2").hide();
+  }
 })
 
 $("#hold1").click(function(){
