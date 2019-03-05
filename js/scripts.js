@@ -33,7 +33,7 @@ Roller.prototype.hold = function(){
     document.getElementById("win").innerHTML="You won";
   }
  }
- 
+
 
 Roller.prototype.freshGame = function(){
   this.diceRoll=0;
@@ -97,15 +97,13 @@ $(document).ready(function(){
 
     var name = $("#name").val();
     var email = $("#email").val();
-    playerOne = new Player(name,email);
-    $(".name").text(playerOne.name);
-    $(".em").text(playerOne.email);
+    $(".name").text(name);
+    $(".em").text(email);
 
     var name2 = $("#name2").val();
     var email2 = $("#email2").val();
-    playerTwo = new Player(name2,email2);
-    $(".name2").text(playerTwo.name2);
-    $(".em2").text(playerTwo.email2);
+    $(".name2").text(name2);
+    $(".em2").text(email2);
   });
 
   $("#proc").click(function(){
