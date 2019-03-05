@@ -63,7 +63,8 @@ body{
 }
 
 
-#name,#name2,#emmail,#email2{
+#name,#name2,#email,#email2{
   color: black;
-  border-radius: 3px;
+  border-radius: 20px;
+  padding: 5px;
 }
