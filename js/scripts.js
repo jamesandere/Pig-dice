@@ -125,8 +125,7 @@ $(document).ready(function(){
   });
 
   $("#freshGame").click(function(){
-    $(".play").hide();
-    $(".head").show();
+    location.reload();
   })
 
 });
