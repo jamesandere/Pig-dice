@@ -1,95 +1,114 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="   crossorigin="anonymous"></script>
-    <script src="js/scripts.js"></script>
-    <title>Pig Dice</title>
-  </head>
-  <body>
-<div class="container">
-  <div class="head">
-    <div class="jumbotron">
-      <h1>PIG DICE</h1>
-      <p>Pig Dice is a dice game between two players.</p>
-    </div>
-    <button id="start" class="btn btn-success" type="button" name="button">Start</button>
-  </div>
-  <div class="rules">
-      <h2>Rules Of The Game</h2>
-      <p>Each turn, a player repeatedly rolls a die until either a 1 is rolled or the player decides to hold:</p>
-      <ol>
-        <li>If a player rolls a 1, they score nothing and it becomes the next player's turn.</li>
-        <li>If a player rolls any other number, it is added to their turn total and the player's turn continues.</li>
-        <li>If a player chooses to hold, their turn total is added to their score, and it becomes the next player's turn.</li>
-        <li>The first player to score 100 or more points wins.</li>
-      </ol>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Fredoka+One|Playfair+Display" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="js/scripts.js"></script>
+  <title>Pig Dice</title>
+</head>
+
+<body>
+  <div id="overlay">
+    <div class="container">
+      <div class="head">
+        <div class="jumbotron">
+          <h1>PIG DICE</h1>
+          <p>Pig Dice is a dice game between two players.</p>
+        </div>
+        <button id="start" class="btn btn-primary" type="button" name="button">Start</button>
+      </div>
+      <div class="rules">
+        <div class="jumbotron">
+        <h2>Rules Of The Game</h2>
+      </div>
+        <p>Each turn, a player repeatedly rolls a die until either a 1 is rolled or the player decides to hold:</p>
+        <ol>
+          <li>If a player rolls a 1, they score nothing and it becomes the next player's turn.</li>
+          <li>If a player rolls any other number, it is added to their turn total and the player's turn continues.</li>
+          <li>If a player chooses to hold, their turn total is added to their score, and it becomes the next player's turn.</li>
+          <li>The first player to score 100 or more points wins.</li>
+        </ol>
+        <button id="rule" class="btn btn-primary" type="button" name="button">Proceed</button>
       </div>
       <div class="dets">
         <div class="jumbotron">
-        <h2>Enter your Details</h2>
+          <h2>Enter your Details</h2>
         </div>
-      <h3>Player 1</h3>
-      <h4>Name</h4>
-      <input type="text" name="" value="" placeholder="Enter your name..">
-      <h4>Email</h4>
-      <input type="email" name="" value="" placeholder="Enter your email here..">
-      <h3>Player 2</h3>
-      <h4>Name</h4>
-      <input type="text" name="" value="" placeholder="Enter your name..">
-      <h4>Email</h4>
-      <input type="email" name="" value="" placeholder="Enter your email here.."><br>
-      <button id="next" class="btn btn-success" type="button" name="button">Next</button>
+        <h3>Player 1</h3>
+        <h4>Name</h4>
+        <input id="name" type="text" name="" value="" placeholder="Enter your name..">
+        <h4>Email</h4>
+        <input id="email" type="email" name="" value="" placeholder="Enter your email here..">
+        <h3>Player 2</h3>
+        <h4>Name</h4>
+        <input id="name2" type="text" name="" value="" placeholder="Enter your name..">
+        <h4>Email</h4>
+        <input id="email2" type="email" name="" value="" placeholder="Enter your email here.."><br>
+        <button id="next" class="btn btn-primary" type="button" name="button">Next</button>
       </div>
       <div class="wel">
         <div class="jumbotron">
-        <h2>Welcome. Good luck!</h2>
-      </div>
-      <div class="row">
-        <div class="col-md-6">
-        <img src="https://image.flaticon.com/icons/svg/47/47930.svg" alt="" width="300px" height="300px">
-        <h4></h4>
-        <h4></h4>
-        <h4></h4>
-      </div>
-      <div class="col-md-6">
-        <img src="https://image.flaticon.com/icons/svg/126/126355.svg" alt="" width="300px" height="300px">
-        <h4></h4>
-        <h4></h4>
-        <h4></h4>
-      </div>
-        <button id="proc" class="btn btn-success" type="button" name="button">Proceed</button>
-      </div>
+          <h2>Welcome. Good luck!</h2>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <img src="https://image.flaticon.com/icons/svg/47/47930.svg" alt="" width="300px" height="300px">
+            <h4 class="name"></h4>
+            <h4 class="em"></h4>
+            <h4></h4>
+          </div>
+          <div class="col-md-6">
+            <img src="https://image.flaticon.com/icons/svg/126/126355.svg" alt="" width="300px" height="300px">
+            <h4 class="name2"></h4>
+            <h4 class="em2"></h4>
+            <h4></h4>
+          </div>
+          <button id="proc" class="btn btn-primary" type="button" name="button">Proceed</button>
+        </div>
       </div>
       <div class="play">
-      <div class="jumbotron">
+        <div class="jumbotron">
 
-        <h2>Let's Play!</h2>
-      </div>
-      <div class="row">
-        <div class="col-md-6">
-        <h3>Player 1</h3>
-        <img src="https://image.flaticon.com/icons/svg/48/48744.svg" alt="">
-        <button id="one" class="btn btn-success" type="button" name="button" onclick="roll()">Roll</button>
-        <button id="hold1" class="btn btn-success" type="button" name="button" onclick="hold()">Hold</button>
-        <h3>Your Dice Roll:<span id="game"></span></h3>
-        <h4>Your score in this round:<span id="round"></span></h4>
-        <h4>Overral Score:<span id="ov"></span></h4>
-</div>
-<div class="col-md-6">
-        <h3>Player 2</h3>
-        <img src="https://image.flaticon.com/icons/svg/40/40425.svg" alt="" width="130px" height="130px">
-        <button id="two" class="btn btn-success" type="button" name="button" onclick="roll()" >Roll</button>
-        <button id="hold2" class="btn btn-success" type="button" name="button">Hold</button>
-        <h3>Your Dice Roll:<span id="gam"></span></h3>
-        <h4>Your score in this round:<span id="round2"></span> </h4>
-        <h4>Overral Score:<span id="ov2"></span> </h4>
-</div>
+          <h2>Let's Play!</h2>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="pl1">
+              <h3>Player 1</h3>
+              <img src="https://image.flaticon.com/icons/svg/48/48744.svg" alt="">
+              <button id="one" class="btn btn-danger" type="button" name="button" onclick="roll()">Roll</button>
+              <button id="hold1" class="btn btn-danger" type="button" name="button" onclick="hold()">Hold</button>
+              <h3>Your Dice Roll:<span id="game"></span></h3>
+              <h4>Your score in this round:<span id="round"></span></h4>
+              <h4>Overral Score:<span id="ov"></span></h4>
+            </div>
+          </div>
+          <div class="col-md-4">
+
+            <h3 id="nex"></h3>
+          </div>
+          <img id="img" src="" alt="">
+          <div class="col-md-4">
+            <div class="pl2">
+              <h3>Player 2</h3>
+              <img src="https://image.flaticon.com/icons/svg/40/40425.svg" alt="" width="130px" height="130px">
+              <button id="two" class="btn btn-danger" type="button" name="button" onclick="roll()">Roll</button>
+              <button id="hold2" class="btn btn-danger" type="button" name="button">Hold</button>
+              <h3>Your Dice Roll:<span id="gam"></span></h3>
+              <h4>Your score in this round:<span id="round2"></span> </h4>
+              <h4>Overral Score:<span id="ov2"></span> </h4>
+            </div>
+          </div>
+          <h3 id="win"></h3>
+        </div>
+        <button id="freshGame" class="btn btn-primary" type="button" name="button">Fresh Game</button>
       </div>
     </div>
-    <button id="freshGame" type="button" name="button">Fresh Game</button>
-</div>
-  </body>
+  </div>
+</body>
+
 </html>

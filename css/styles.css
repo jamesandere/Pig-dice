@@ -55,12 +55,15 @@ body{
 
 #freshGame{
   display: none;
+  margin-top: 80px;
 }
 
 .pl2{
   display: none;
 }
 
-{
+
+#name,#name2,#emmail,#email2{
+  color: black;
   border-radius: 3px;
 }
