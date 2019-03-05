@@ -1,7 +1,13 @@
 body{
-  background-image:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("https://steamuserimages-a.akamaihd.net/ugc/3298062395394990387/6FB01AA0A96A39A5394808EECB669D5F11AFFFF8/");
+  background-image: url("https://images.pexels.com/photos/301926/pexels-photo-301926.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
   color: white;
   font-size: 20px;
+  margin: 0;
+  padding: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
 }
 
 .rules{
@@ -31,4 +37,12 @@ body{
 #next{
   margin-top: 20px;
   border-radius: 10px;
+}
+
+#freshGame{
+  display: none;
+}
+
+.pl2{
+  display: none;
 }
